@@ -16,7 +16,7 @@ export default class RecaptchaState {
   }
 
   render(element) {
-    this.widgetId = grecaptcha.render(element, {
+    this.widgetId = grecaptcha.enterprise.render(element, {
       sitekey: this.settings['fof-recaptcha.credentials.site'],
       theme: !!Number(this.settings['theme_dark_mode']) ? 'dark' : 'light',
       type: this.type,
